@@ -1,0 +1,41 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "@babel/preset-react": "^7.0.0",
+        "axios": "^0.19",
+        "browser-sync": "^2.26.7",
+        "browser-sync-webpack-plugin": "^2.0.1",
+        "cross-env": "^5.1",
+        "laravel-mix": "^4.0.7",
+        "lodash": "^4.17.13",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "resolve-url-loader": "^2.3.1"
+    },
+    "dependencies": {
+        "@material-ui/core": "^4.8.2",
+        "@material-ui/icons": "^4.5.1",
+        "@mui-treasury/components": "^1.0.1",
+        "@mui-treasury/layout": "^3.3.4",
+        "@mui-treasury/mockup": "^1.0.1",
+        "@mui-treasury/styles": "^1.1.0",
+        "@mui-treasury/styling": "^0.2.8",
+        "@mui-treasury/utils": "^0.4.0",
+        "classnames": "^2.2.6",
+        "material-table": "^1.57.2",
+        "react-hook-form": "^4.5.5",
+        "react-paginate": "^6.3.2",
+        "react-router-dom": "^5.1.2",
+        "react-swipeable-views": "^0.13.9",
+        "react-swipeable-views-utils": "^0.13.9"
+    }
+}
