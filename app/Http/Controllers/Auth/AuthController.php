@@ -51,9 +51,10 @@ class AuthController extends Controller /*AccessTokenController */
             return response(['errors' => $validator->errors()->all()], 400);
         }
         $user = User::where('email', $request->email)->first();
+
         if ($user) {
             if ($this->guard()->once(['email' => $request->email, 'password' => $request->password])) {
-                $token = $user->createToken('Laravel Password Grant Client')->accessToken;
+                $token = $user->createToken('Laravel Password Grant Client', [$user->type()])->accessToken;
                 return response()->json(['token' => $token, 'user' => $user], 200);
             } else {
                 $response = ["message" => "Password mismatch"];
